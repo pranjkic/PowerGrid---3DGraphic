@@ -5,8 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PZ3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="800" Width="1100" WindowStartupLocation="CenterScreen">
+    <Grid Background="White">
+        <ScrollViewer  Name="scrollViewer" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Hidden">
+            <Viewport3D Name="mainViewport" ClipToBounds="True" Height="700" Width="1000">
+
+                <Viewport3D.Camera>
+                    <PerspectiveCamera  x:Name = "camera" Position = "5 -5 8" LookDirection = "0 8 -8"
+                                    FieldOfView = "57" UpDirection = "0,1,0"/>
+                </Viewport3D.Camera>
+
+                <ModelVisual3D x:Name="MyModel">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <Transform3DGroup.Children>
+                                <Transform3DCollection>
+
+                                    <ScaleTransform3D ScaleX="1" ScaleY="1" ScaleZ="1" />
+                                    <RotateTransform3D CenterX="5" CenterY="3.5" CenterZ="0">
+                                        <RotateTransform3D.Rotation>
+                                            <AxisAngleRotation3D   Angle="0" />
+                                        </RotateTransform3D.Rotation>
+                                    </RotateTransform3D>
+                                    <TranslateTransform3D OffsetX="0" OffsetY="0" OffsetZ="0" />
+
+                                </Transform3DCollection>
+                            </Transform3DGroup.Children>
+
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+
+                    <ModelVisual3D.Content>
+                        <Model3DGroup>
+                            <Model3DGroup.Children>
+                                <AmbientLight/>
+
+                                <GeometryModel3D x:Name="geometryModel">
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D x:Name = "meshMain"
+                                        Positions = "0,0,0 10,0,0 10,7,0 0,7,0"  
+                                        TriangleIndices = "0,1,2 0,2,3"
+                                        TextureCoordinates="0,1 1,1 1,0 0,0">
+                                        </MeshGeometry3D>
+                                    </GeometryModel3D.Geometry>
+
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial>
+                                            <DiffuseMaterial.Brush>
+                                                <ImageBrush ImageSource="C:\Users\Milica\Desktop\Grafika\PZ3\PZ3 - map.jpg"/>
+                                            </DiffuseMaterial.Brush>
+                                        </DiffuseMaterial>
+                                    </GeometryModel3D.Material>
+
+                                </GeometryModel3D>
+
+                                <GeometryModel3D>
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D x:Name = "meshBack"
+                                        Positions = "0,0,-0.03 10,0,-0.03 10,7,0 0,7,-0.03"  
+                                        TriangleIndices = "1,0,3 3,2,1">
+                                        </MeshGeometry3D>
+                                    </GeometryModel3D.Geometry>
+
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial>
+                                            <DiffuseMaterial.Brush>
+                                                <SolidColorBrush Color="Black"/>
+                                            </DiffuseMaterial.Brush>
+                                        </DiffuseMaterial>
+                                    </GeometryModel3D.Material>
+                                </GeometryModel3D>
+
+                            </Model3DGroup.Children>
+                        </Model3DGroup>
+
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+            </Viewport3D>
+
+        </ScrollViewer>
+        <Button Content="vise od 5" Margin="891,10,19,704" Click="Button_Click"/>
+        <Button Content="od 0 do 3" Margin="517,10,393,704" Click="Button_Click_1" />
+        <Button Content="od 3 do 5" Margin="704,10,206,704" Click="Button_Click_2" />
     </Grid>
 </Window>

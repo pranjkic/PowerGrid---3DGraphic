@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZ3", "PZ3\PZ3.csproj", "{B32E4C21-41EE-4EBD-9071-6A07A2EB3B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZ3.Repository", "PZ3.Repository\PZ3.Repository.csproj", "{965A2671-4E63-42C2-BB29-FC14A8DB13BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZ3.Model", "PZ3.Model\PZ3.Model.csproj", "{FDAD66B7-5268-45FE-A66E-389EC36D588C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B32E4C21-41EE-4EBD-9071-6A07A2EB3B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32E4C21-41EE-4EBD-9071-6A07A2EB3B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B32E4C21-41EE-4EBD-9071-6A07A2EB3B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965A2671-4E63-42C2-BB29-FC14A8DB13BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965A2671-4E63-42C2-BB29-FC14A8DB13BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965A2671-4E63-42C2-BB29-FC14A8DB13BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965A2671-4E63-42C2-BB29-FC14A8DB13BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAD66B7-5268-45FE-A66E-389EC36D588C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAD66B7-5268-45FE-A66E-389EC36D588C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAD66B7-5268-45FE-A66E-389EC36D588C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAD66B7-5268-45FE-A66E-389EC36D588C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
